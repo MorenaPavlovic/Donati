@@ -15,6 +15,6 @@ a onima koji su u mogućnosti donirati hranu pružiti zadovoljstvo da na jednost
 
  
 
-Frontend: Bootstrap 3.3.7 i JS
+Frontend: Bootstrap 3.3.7
 
 Backend: SQL i PHP.
