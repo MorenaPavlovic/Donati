@@ -1,0 +1,111 @@
+body{
+	background-image: url(pozadina.jpg);
+	background-repeat: no;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.col-md-7{
+	margin-top: 60px;
+	background-color:rgba(155, 18, 135, 0.57);
+	box-shadow: -1px 1px 60px 10px black;
+}
+
+h1{
+	font-size: 40px;
+	color: white;
+	margin-top: 40px;
+	letter-spacing: 10px;
+}
+
+p{
+	font-size: 17px;
+	color: white;
+	font-size: 17px;
+	
+}
+
+h3{
+	font-size: 25px;
+	color: white;
+}
+
+.col-md-5{
+	margin-top:320px;
+	box-shadow: -1px 1px 60px 10px black;
+	background-color:rgba(155, 18, 135, 0.57);
+}
+
+.doniraj{
+	margin-top: 220px;
+}
+
+.label{
+	font-weight: normal;
+	margin-top: 20px;
+	color: white;
+	font-size: 17px;
+}
+
+.form-control{
+	background: transparent;
+	border-radius: 15px;
+	border:1px solid white;
+	font-size: 18px;
+	margin-top: 15px;
+	height:30px;
+	color:white;
+}
+
+
+small{
+	font-size: 16px;
+	color:white;
+}
+
+input[type="radio"]{
+	margin-top:22px;
+}
+
+.btn-info{
+	margin-top: 40px;
+	font-size: 18px;
+	width: 120px;
+	margin-left:100px;
+	margin-bottom:20px;
+}
+
+.odjava{
+	width: 120px;
+	margin-bottom:20px;
+	float: right;
+	margin-right: 45px;
+	margin-top: 30px;
+}
+
+.btn-warning{
+	margin-top: 40px;
+	font-size: 18px;
+	width: 120px;
+	margin-bottom:20px;
+}
+
+
+a{
+	color:white;
+	margin-bottom:20px;
+}
+
+.fa-check {
+   position: absolute;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.center{
+	text-align: center;
+	width: 50%;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+}
