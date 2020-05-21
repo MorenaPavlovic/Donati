@@ -18,3 +18,8 @@ a onima koji su u mogućnosti donirati hranu pružiti zadovoljstvo da na jednost
 Frontend: Bootstrap 3.3.7
 
 Backend: SQL i PHP.
+
+
+Bootstrap podržava najnovija, stabilna izdanja svih glavnih preglednika i platformi. U sustavu Windows podržava 
+Internet Explorer 10-11 / Microsoft Edge. Bootstrap podržava najnovije verzije zadanih preglednika svake glavne platforme. 
+
