@@ -1,6 +1,9 @@
+
 <html>
 <head>
+ 
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 <link rel="stylesheet" type="text/css"href="forme_style.css">
@@ -9,36 +12,35 @@
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <title>Donati</title>
 </head>
 <body>
-<a href="prijava.php?logout='1'"><div class="btn btn-info odjava">Odjava</div></a>
+	<a href="prijava.php?logout='1'"><div class="btn btn-info odjava">Odjava</div></a>
 	<div class="container">
 		
-		<div class="col-md-5 col-md-offset-4 doniraj">
+			<div class="col-md-5 col-md-offset-4 doniraj">
 			
-			<div class="row">
-				<h3 class="text-center">DONACIJA USPJEŠNA</h3>
-			</div>
+				<div class="row">
+						<h3 class="text-center">ODABERI OBJAVE ZA PRIKAZ</h3>
+				</div>
 				
 			<hr>
-			
-			<div class="row">
+				<form method="GET" action="objave_potrebiti.php">
+				<div class="row">
+				<input type="submit" name="dostava" value="Dostava" class="btn btn-info izbornik">
+				</div>
 				
-				<br/><div><i class="fas fa-check" aria-hidden="true" style="font-size: 50px; color: white;" align="center"></i></div><br/><br/>
-				<p align="center"> Hvala Vam!</p> <br/>
-				<p align="center">"Najlijepša stvar koju čovjek može učiniti je biti drugome koristan" <br/> Sofoklo</p>
+				<div class="row">
+					<input type="submit" name="samostalno" value="Samostalno preuzimanje" class="btn btn-info izbornik">
+				</div>
 				
+				<div class="row">
+					<input type="submit" name="sve" value="Sve" class="btn btn-info izbornik">
+				</div>
+			</form>
 			</div>
-			
-			<a href="objave.php"><div class="btn btn-info center">Povratak</div></a>
-		</div>		 
+		</div>
 
-			
-	</div>
-				
-				
 
 </body>
 </html>

@@ -59,7 +59,15 @@ h3{
 	float: right;
 }
 
+
 .zelim{
 	width: 120px;
 	float: right;
+}
+
+.label_zelim{
+	font-weight: normal;
+	margin-top: 20px;
+	color: rgba(155, 18, 135, 1);
+	font-size: 17px;
 }
