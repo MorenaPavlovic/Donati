@@ -155,8 +155,8 @@
 	}
 	
 	
-	// KREIRANJE DONACIJE 
-	//provjerava je li korisnik kliknuo na gumb Doniraj (donacija.php)
+	// REZERVACIJA OBROKA
+	
 	if (isset($_POST['zelim_potvrda'])) {
 		
 		
@@ -188,27 +188,30 @@
 			
 			if(mysqli_num_rows($provjera) == 1)	{
 				header ('location: zelim_neuspjesno.html');
-			}	
+				}	
 			
 			else {
-			$query = "INSERT INTO zelim (ID_korisnik, Lokacija, Kontakt, ID_br_donacije, Kod, br, Datum)
-						VALUES('$id_user', '$lokacija', '$kontakt', '$br_donacije', '$rand', 1, NOW())";
-					  
-			mysqli_query($db, $query);										//funkcija izvršava upit prema bazi podataka
-			
-			$get_num = mysqli_query($db, "SELECT Kolicina FROM donacija WHERE ID_donacija='$br_donacije'");	//sql upit prema bazi
-			$row = mysqli_fetch_array($get_num);														  	//varijabli row dodjeljuje se vriijednost reda rezultata upita
-			$total_num = $row['Kolicina'];																	//varijabi je dodjeljena vrijednost polja reda likes
-			$total_num--;
-			$query_num = mysqli_query($db, "UPDATE donacija SET Kolicina='$total_num' WHERE ID_donacija ='$br_donacije'");
-
-			$_SESSION['username'] = $username;								//sesiji će biti dodjeljena vrijednost korisničkog imena dok se preglednik ne zatvori
-								//sesiji će biti dodjeljena poruka o uspješnom ulazu dok se preglednik ne zatvori
-			
-			header('location: zelim_uspjesno.html');
 			
 			
-					
+				$get_num = mysqli_query($db, "SELECT Kolicina FROM donacija WHERE ID_donacija='$br_donacije'");	//sql upit prema bazi
+				$row = mysqli_fetch_array($get_num);														  	//varijabli row dodjeljuje se vriijednost reda rezultata upita
+				$total_num = $row['Kolicina'];																	//varijabi je dodjeljena vrijednost polja reda likes
+				$total_num--;
+			
+				if($total_num > -1)
+				{
+					$query = "INSERT INTO zelim (ID_korisnik, Lokacija, Kontakt, ID_br_donacije, Kod, br, Datum)
+							VALUES('$id_user', '$lokacija', '$kontakt', '$br_donacije', '$rand', 1, NOW())";
+						  
+					mysqli_query($db, $query);										//funkcija izvršava upit prema bazi podataka
+					$query_num = mysqli_query($db, "UPDATE donacija SET Kolicina='$total_num' WHERE ID_donacija ='$br_donacije'");
+				
+					$_SESSION['username'] = $username;								//sesiji će biti dodjeljena vrijednost korisničkog imena dok se preglednik ne zatvori
+					header('location: zelim_uspjesno.html');}
+				
+				else{
+					array_push($errors, "Obrok više nije dostupan");
+					}		
 			
 			}
 		}		

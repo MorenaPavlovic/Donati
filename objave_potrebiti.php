@@ -1,4 +1,6 @@
 <?php include('posluzitelj.php'); ?>
+
+
 <html>
 <head>
 
@@ -65,7 +67,6 @@
 									Preuzimanje: $preuzimanje </br>
 									Lokacija: $lokacija </br>
 									od $vrijeme_od do $vrijeme_do</p>
-									$id_donacije
 								<hr>
 							</div>
 						";
